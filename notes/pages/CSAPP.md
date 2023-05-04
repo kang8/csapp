@@ -1,0 +1,11 @@
+- [[resources]]
+-
+- ## 正文
+- [[chapters]]
+- [[labs]]
+-
+-
+-
+-
+- 封面图的含义： http://csappbook.blogspot.com/2017/05/the-memory-mountain-l2-bump.html
+- 在 CMU 的课程编码 15-213、Introduction to Computer System, ICS
