@@ -1,0 +1,1 @@
+- A file is a sequence of bytes.

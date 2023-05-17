@@ -1,0 +1,4 @@
+- 编译阶段
+- 编译器（ccl）将文本文件 `hello.i` 翻译成文本文件 `hello.s`，它包含一个汇编语言程序。
+- command
+	- `gcc -S hello.i`

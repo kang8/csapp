@@ -1,13 +1,16 @@
 - [[Chapter 1: A Tour of Computer Systems]]
-- [[Chapter 2: Representing and Manipulating Information]]
-- [[Chapter 3: Machine-Level Representation of Programs]]
-- [[Chapter 4: Processor Architecture]]
-- [[Chapter 5: Optimizing Program Performance]]
-- [[Chapter 6: The Memory Hierarchy]]
-- [[Chapter 7: Linking]]
-- [[Chapter 8: Exceptional Control Flow]]
-- [[Chapter 9: Virtual Memory]]
-- [[Chapter 10: System-Level I/O]]
-  id:: 6453bfdc-f975-47e3-99b3-4d2fc9fb5b80
-- [[Chapter 11: Network Programming]]
-- [[Chapter 12: Concurrent Programming]]
+- Part I: Program Structure and Execution
+	- [[Chapter 2: Representing and Manipulating Information]]
+	- [[Chapter 3: Machine-Level Representation of Programs]]
+	- [[Chapter 4: Processor Architecture]]
+	- [[Chapter 5: Optimizing Program Performance]]
+	- [[Chapter 6: The Memory Hierarchy]]
+- Part II: Running Programs On a System
+	- [[Chapter 7: Linking]]
+	- [[Chapter 8: Exceptional Control Flow]]
+	- [[Chapter 9: Virtual Memory]]
+- Part III: Interaction and Communication between Programs
+	- [[Chapter 10: System-Level I/O]]
+	  id:: 6453bfdc-f975-47e3-99b3-4d2fc9fb5b80
+	- [[Chapter 11: Network Programming]]
+	- [[Chapter 12: Concurrent Programming]]

@@ -1,0 +1,2 @@
+- 汇编阶段
+- 汇编器（as）将 hello.s 翻译成机器语言指令，把这些指令打包成一种叫做**可重定位目标程序**（relocatable object program）的格式，并将结果保存在目标文件 `hello.o` 中。
