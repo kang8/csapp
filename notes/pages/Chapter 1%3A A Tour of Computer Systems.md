@@ -23,7 +23,8 @@
 		    return 0;
 		  }
 		  ```
-		- gcc -Wall -Og -m64 hello.c
+		- gcc -Wall -Og -m64 hello.c #gcc
+		  id:: 64760016-8846-4b98-80e1-b7e2e6fdc417
 			- [[-Wall]] 报告所有警告
 			- [[-Og]] 优化调试体验
 			- [[-m64]] 忽略 Nvidia PTX 选项，但为了保留而向后兼容
