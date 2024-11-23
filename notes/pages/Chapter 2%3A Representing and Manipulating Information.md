@@ -10,6 +10,7 @@
   浮点数能编码较大的数值范围，但这种表示是近似的。
 - ---
 - 2.1 Information Storage
+  collapsed:: true
 	- 大多数计算机使用 8 位的块，或称字节（ [[byte]] ），作为最小的可寻址的内存单位。
 	- 2.1.1 Hexadecimal Notation
 		- 通常使用**十六进制表示法**表示字节。因为二进制表示法太冗长，而十进制表示法与位模式的互相在转化很麻烦。
@@ -62,6 +63,7 @@
 		- LATER Practies 2.12 值得记录
 		  :LOGBOOK:
 		  CLOCK: [2023-06-27 Tue 21:33:11]
+		  CLOCK: [2023-06-28 Wed 20:32:17]--[2023-06-28 Wed 20:32:22] =>  00:00:05
 		  :END:
 		- LATER Practies 2.12 值得记录
 	- 2.1.8 Logical Operations（逻辑运算） in C
@@ -75,3 +77,32 @@
 			- 算术(arithmetic)右移，`1010 >> 2 = 1110`
 		- 对于**有**符号数，C 语言没有明确的标准定义，但几乎所有的编译器/机器组合都对有符号数使用**算数右移**
 		- 对于**无**符号数，使用**逻辑右移**
+- 2.2 Integer Representations
+	- Use website:
+		- https://www.rapidtables.com/convert/number/decimal-to-hex.html 用来 decimal 和 hexadecimal 互相转换
+	- 整数的两种编码方式：
+		- 无符号数：只能表示非负数。
+		- 有符号数：能过表示负数、零和正数。
+	- 2.2.1 Integral Data Types
+		- C 语言整数数据类型：
+			- `[signed] char`, `unsigned char`
+			- `short`, `unsigned short`
+			- `int`, `unsigned`
+			- `long`, `unsigned long`
+			- `int32_t`, `uint32_t`
+			- `int64_t`, `uint64_t`
+		- 有符号整数的取值范围不是对称的——负数的范围比整数的范围大 1
+		- 而对于 C 语言标准，除固定大小的数据类型（int32_t, int64_t）外，整数和负数的取值范围是对称的。
+			- 对于 `char`，它的最小值为 `-127`，最大值为 `127`
+			- 但对于 `int32_t`，它的最小值为 `-2147483648`，最大值为 `2147483647`
+	- 2.2.2 Unsigned Encodings
+		- 无符号数编码的定义：
+			- $$ B2U_w(\vec{x}) \doteq \sum_{i=0}^{w-1} x_i 2^i $$
+			- $$ B2U_w([0001]) = 0 * 2^3 + 0 * 2^2 + 0 * 2^1 + 1 * 2^0 = 0 + 0 + 0 + 1 = 1 $$
+			- $$ B2U_w([1111]) = 1 * 2^3 + 1 * 2^2 + 1 * 2^1 + 1 * 2^0 = 8 + 4 + 2 + 1 = 15 $$
+	- 2.2.3 Two’s-Complement Encodings
+		- 补码编码的定义：
+			- $$ B2T_w(\vec{x}) \doteq - x_{w-1} 2^{w-1} + \sum_{i=0}^{w-2} x_i 2^i $$
+			- $$ B2T_w([0001]) = - 0 * 2^3 + 0 * 2^2 + 0 * 2^1 + 1 * 2^0 = 0 + 0 + 0 + 1 = 1 $$
+			- $$ B2T_w([1111]) = - 1 * 2^3 + 1 * 2^2 + 1 * 2^1 + 1 * 2^0 = -8 + 4 + 2 + 1 = -1 $$
+			- 其中最高有效位，或称符号位，解释为负权（negative weight）。符号位被设置为 1 时，表示值为负，而当设置为 0 时，值为非负。
